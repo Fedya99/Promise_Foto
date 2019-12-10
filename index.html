@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Foto</title>
+    <link rel="stylesheet" href="css/style.css">
+    
+</head>
+<body>
+    <script>
+    var img1=document.createElement('img1');
+    var img2=document.createElement('img2');
+    var img3=document.createElement('img3');
+    img1.innerHTML="<img src='img/1.jpg' width=400 height=400>";
+    img2.innerHTML="<img src='img/2.jpg' width=400 height=400>";
+    img3.innerHTML="<img src='img/3.jpg' width=400 height=400>";
+    new Promise(function(resolve, reject) {
+
+    setTimeout(() => resolve(img1), 1000);
+
+    }).then(function(img1) {
+
+        document.body.append(img1);
+
+    return new Promise((resolve, reject) => {
+    setTimeout(() => resolve(img2), 2000);
+    });
+
+    }).then(function(img2) { 
+
+        document.body.append(img2) 
+
+    return new Promise((resolve, reject) => {
+    setTimeout(() => resolve(img3), 3000);
+    });
+
+    }).then(function(img3) {
+
+    document.body.append(img3);
+
+    });
+    </script>
+</body>
+</html>
