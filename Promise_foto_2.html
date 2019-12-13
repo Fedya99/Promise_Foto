@@ -4,9 +4,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Foto</title>
+    <title>Document</title>
     <link rel="stylesheet" href="css/style.css">
-    
 </head>
 <body>
     <script>
@@ -18,14 +17,14 @@
     img3.innerHTML="<img src='img/3.jpg' width=400 height=400>";
     new Promise(function(resolve, reject) {
 
-    setTimeout(() => resolve(img1), 1000);
+    setInterval(() => resolve(img1), 1000);
 
     }).then(function(img1) {
 
         document.body.append(img1);
 
     return new Promise((resolve, reject) => {
-    setTimeout(() => resolve(img2), 2000);
+    setInterval(() => resolve(img2), 2000);
     });
 
     }).then(function(img2) { 
@@ -33,7 +32,7 @@
         document.body.append(img2) 
 
     return new Promise((resolve, reject) => {
-    setTimeout(() => resolve(img3), 3000);
+    setInterval(() => resolve(img3), 3000);
     });
 
     }).then(function(img3) {
